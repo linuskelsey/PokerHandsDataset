@@ -13,9 +13,10 @@ wget http://poker.cs.ualberta.ca/IRC/IRCdata.tgz  # download the database (-> IR
 tar -xvf IRCdata.tgz                              # unzip the tgz file (-> IRCdata)
 python3 extract.py                                # extract data (-> hands.json)
 python3 clean.py                                  # drop invalid hand data (-> hands_valid.json)
+python3 extract_basic.py                          # extract only the board, players' pocket cards and winners
 ```
 
-Eventually there're 10,233,955 hands in `hands.json` and 437,862 in `hands_valid.json` after cleaning.
+Eventually there're 10,233,955 hands in `hands.json` and 437,862 in `hands_valid.json` after cleaning (if all games are considered - with hold 'em only it's 117,801 final hands).
 
 ## Data Inspection
 
