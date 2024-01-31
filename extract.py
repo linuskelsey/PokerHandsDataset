@@ -105,7 +105,7 @@ and ready for loading into MongoDB.
 
 # Parses "hdb" file from the IRC Poker Database http://poker.cs.ualberta.ca/irc_poker_database.html
 from builtins import str
-from ColorPrint import print
+from print_color import print
 import os
 from tarfile import TarFile
 import re
@@ -113,7 +113,7 @@ import codecs
 import json
 
 # ENVIRONMENT VARIABLES -- CHANGE THESE TO FIT YOUR ENVIRONMENT
-tgz_extract_directory = "/Users/allenfrostline/Downloads/"
+tgz_extract_directory = "/Users/linuskelsey/Desktop/Coding/Python/projects/active/pokerHandAnalyser/pokerHandsDataset/"
 OUTFILE = tgz_extract_directory + "hands.json"
 LOCAL_OS = "mac"  # valid values are "mac" or "pc"
 # END ENVIRONMENT VARIABLES
@@ -407,7 +407,7 @@ def loop_tgz(extract_dir):
                     else:
                         print("Skipping " + tgz_file + " because it is for an invalid game type", color='red')
         return file_groups
-    except IOError:
+    except (IOError, EOFError):
         # invalid_keys.add(_id)
         tar.close()
         return file_groups
