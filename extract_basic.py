@@ -1,7 +1,7 @@
 import json
 
 fout = open('hands_basic.json', 'w')
-fout.write('[')
+fout.write('[\n')
 total = sum(1 for line in open('hands_valid.json'))
 with open('hands_valid.json', 'r') as f:
     # Running total for number of rounds processed
@@ -23,6 +23,6 @@ with open('hands_valid.json', 'r') as f:
         fout.write(json.dumps(hand) + ',\n')
         print('{} out of {} processed. {:.2%} done.'.format(curr, total, curr/total), end='\r')
         line = f.readline()
-fout.write(']')
 
-print('\n    NOTE: Remove the trailing comma in hands_basic.json.\n')
+fout.write('\n]')
+print('\n     NOTE: Remove trailing comma in hands_basic.json.')
