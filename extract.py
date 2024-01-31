@@ -113,8 +113,8 @@ import codecs
 import json
 
 # ENVIRONMENT VARIABLES -- CHANGE THESE TO FIT YOUR ENVIRONMENT
-tgz_extract_directory = "/Users/linuskelsey/Desktop/Coding/Python/projects/active/pokerHandAnalyser/pokerHandsDataset/"
-OUTFILE = tgz_extract_directory + "hands.json"
+tgz_extract_directory = os.getcwd()
+OUTFILE = tgz_extract_directory + "/hands.json"
 LOCAL_OS = "mac"  # valid values are "mac" or "pc"
 # END ENVIRONMENT VARIABLES
 
