@@ -8,7 +8,7 @@ Simple scripts to extract, clean and browse the [IRC Poker Database](https://pok
 
 Run the following codes in order:
 
-```bash
+```zsh
 wget http://poker.cs.ualberta.ca/IRC/IRCdata.tgz  # download the database (-> IRCdata.tgz)
 tar -xvf IRCdata.tgz                              # unzip the tgz file (-> IRCdata)
 python3 extract.py                                # extract data (-> hands.json)
@@ -21,7 +21,7 @@ Eventually there're 10,233,955 hands in `hands.json` and 437,862 in `hands_valid
 
 You may run the following code to inspect hands in their original order. Any time you'd like to stop browsing, you can just use `Ctrl+C` to interrupt the process.
 
-```bash
+```zsh
 python3 browse.py                                 # print hands in a formatted way
 ```
 
