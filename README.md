@@ -2,7 +2,7 @@
 
 Forked from [allenfrostline](https://github.com/allenfrostline/PokerHandsDataset)'s repo, but updated by myself to include usage for Python3 with up-to-date modules (you will need to `pip3 install print-color` first).
 
-Simple scripts to extract, clean and browse the IRC Poker Database. Note here only hold 'em hands are included. Most (over 95%) hands are dropped either because they're not hold 'em or because of lack of features.
+Simple scripts to extract, clean and browse the [IRC Poker Database](https://poker.cs.ualberta.ca/irc_poker_database.html). Note here only hold 'em hands are included, but that can be changed from within [`extract.py`](extract.py). Most (over 95%) hands are dropped either because they're not hold 'em or because of lack of features.
 
 ## Data Preparation
 
