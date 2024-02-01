@@ -4,7 +4,8 @@ Forked from [allenfrostline](https://github.com/allenfrostline/PokerHandsDataset
 
 Simple scripts to extract, clean and browse the [IRC Poker Database](https://poker.cs.ualberta.ca/irc_poker_database.html). Note here only hold 'em hands are included, but that can be changed from within [`extract.py`](extract.py). Most (over 95%) hands are dropped either because they're not hold 'em or because of lack of features. It should be noted that hands included in both the `hands_valid.json` and `hands_basic.json` files include only those players who revealed their cards at the end of a round, i.e. those who had a chance to win the pot when all cards were shown.
 
-Additional functionality added by me to extract further basic information about the data, reducing a round to the community cards and each players' pocket cards and whether they won/lost. The script [`encode_basic.py`](encode_basic.py) turns the data from `hands_basic.json` into encoded data (strings for cards converted to unique integers via [`encoding.py`](encoding.py)) for easy use in machine learning models.
+Additional functionality added by me to extract further basic information about the data ([`extract_basic.py`](extract_basic.py)), reducing a round to the community cards and each players' pocket cards and whether they won/lost. The script [`encode_basic.py`](encode_basic.py) turns the data from `hands_basic.json` into encoded data (strings for cards converted to unique integers via [`encoding.py`](encoding.py)) for easy use in machine learning models.
+
 
 ## Data Preparation
 
