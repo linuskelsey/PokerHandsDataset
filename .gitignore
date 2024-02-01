@@ -1,7 +1,14 @@
+# Individual game type datasets
 holdem*
 nolimit
 tourney
 
+# Full dataset
 IRCdata*
 
+# JSON files
 hands*
+encode_basic.json
+
+# PyCache
+__pycache__
