@@ -16,7 +16,7 @@ tar -xvf IRCdata.tgz                              # unzip the tgz file (-> IRCda
 python3 extract.py                                # extract data (-> hands.json)
 python3 clean.py                                  # drop invalid hand data (-> hands_valid.json)
 python3 extract_basic.py                          # extract only the board, players' pocket cards and winners (-> hands_basic.json)
-python3 encode_basic.py                           # encode data from hands_basic.json into integers for a machine learning model (-> encode_basic.json)
+python3 encode_basic.py                           # encode data from hands_basic.json into integers for a machine learning model (-> encoded_basic.json)
 ```
 
 Eventually there're 10,233,955 hands in `hands.json` and 437,862 in `hands_valid.json` after cleaning (if all games are considered - with hold 'em only it's 117,801 final hands).

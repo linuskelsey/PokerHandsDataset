@@ -8,7 +8,7 @@ IRCdata*
 
 # JSON files
 hands*
-encode_basic.json
+encoded_basic.json
 
 # PyCache
 __pycache__
