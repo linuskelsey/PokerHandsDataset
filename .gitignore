@@ -12,3 +12,6 @@ encoded_basic.json
 
 # PyCache
 __pycache__
+
+# finalised datasets
+game_data/*
