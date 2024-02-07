@@ -113,7 +113,7 @@ import codecs
 import json
 
 # ENVIRONMENT VARIABLES -- CHANGE THESE TO FIT YOUR ENVIRONMENT
-tgz_extract_directory = os.getcwd()
+tgz_extract_directory = os.getcwd() + '/'
 OUTFILE = tgz_extract_directory + "/hands.json"
 LOCAL_OS = "mac"  # valid values are "mac" or "pc"
 # END ENVIRONMENT VARIABLES
