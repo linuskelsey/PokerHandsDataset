@@ -25,10 +25,10 @@ def separate_stage(stage):
 
                 for player in obj['players']:
                     X = []
-                    X.append(player[0])
+                    X += player[0]
 
                     if board:
-                        X.append(board)
+                        X += board
 
                     foutObj[0].append(X)
                     foutObj[1].append(player[1])

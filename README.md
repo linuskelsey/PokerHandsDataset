@@ -85,10 +85,10 @@ Once these have been encoded into a fourth json, `encoded_basic.json`, the data 
 
 with each string representing a card encoded into an `int`. Finally, once the [`separate_stages.py`](separate_stages.py) file is run four times with appropriate inputs, four new files within `game_data` are created (you may need to create the folder `game_data`). The effect of [`separate_stages.py`](separate_stages.py) is that each hand is inspected and split to give an input and output for each player of the hand, each of these players providing a specific data point (to a model).
 
-These new files contain a 1x2 array, the inputs and outputs to a potential ML model. The outputs are simple `bool`'s representing a win or a loss, and the inputs are lists. Within these, depending on the stage of the competition, there will be one (preflop) or two (all other stages) sublists. These will contain first, a list with the two encoded pocket cards of a player, and second, the encoded community cards on the table. For example, from `encoded_river.json`:
+These new files contain a 1x2 array, the inputs and outputs to a potential ML model. The outputs are simple `bool`'s representing a win or a loss, and the inputs are lists of the cards both in the pocket and on the table (pocket cards always first). For example, from `encoded_river.json`:
 
 ```
-[[[[20, 24], [5, 42, 33, 14]], [[30, 39], [5, 42, 33, 14]],  ... ]]
+[[[20, 24, 5, 42, 33, 14], [30, 39, 5, 42, 33, 14], [6, 23, 5, 42, 33, 14], ... ]]
 ```
 
 ## References
