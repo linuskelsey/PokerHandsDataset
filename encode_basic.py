@@ -28,6 +28,7 @@ with open('hands_basic.json', 'r') as f:
             curr += 1
             print('{} out of {} processed. {:.2%} done.'.format(curr, total, curr/total), end='\r')
             idx += 1
+            
         except json.JSONDecodeError:
             obj = json.loads(lines[idx][:-1])
             obj['board'] = encode_hand(obj['board'])
