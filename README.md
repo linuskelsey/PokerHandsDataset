@@ -63,7 +63,7 @@ The script lists extracted hands history as below.
 
 Once all the data has been extracted and the hands simplified into the basic categories of `num_players`, `board` (the community cards), `players` (the cards each player holds and whether or not they won) and `id` (hand id), there are 3 data files: `hands.json`, `hands_valid.json` and `hands_basic.json`. Running `python3 browse.py` in the terminal will give you data of the form presented above for the second of those three. The `hands_basic.json` contains objects of the form:
 
-```json
+```
 {
     "num_players": <num_players: int>,
     "board": <board: List[str]>,
@@ -74,12 +74,12 @@ Once all the data has been extracted and the hands simplified into the basic cat
 
 Once these have been encoded into a fourth json, `encoded_basic.json`, the data looks like:
 
-```json
+```
 {
-    num_players: <num_players: int>,
-    board: <board: List[int]>,
-    players: <players: [<cards: List[int]>, <won: bool>]>,
-    id: <id: int>
+    "num_players": <num_players: int>,
+    "board": <board: List[int]>,
+    "players": <players: [<cards: List[int]>, <won: bool>]>,
+    "id": <id: int>
 }
 ```
 
@@ -87,7 +87,7 @@ with each string representing a card encoded into an `int`. Finally, once the [`
 
 These new files contain a 1x2 array, the inputs and outputs to a potential ML model. The outputs are simple `bool`'s representing a win or a loss, and the inputs are lists. Within these, depending on the stage of the competition, there will be one (preflop) or two (all other stages) sublists. These will contain first, a list with the two encoded pocket cards of a player, and second, the encoded community cards on the table. For example, from `encoded_river.json`:
 
-```json
+```
 [[[[20, 24], [5, 42, 33, 14]], [[30, 39], [5, 42, 33, 14]],  ... ]]
 ```
 
