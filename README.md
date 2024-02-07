@@ -6,6 +6,8 @@ Simple scripts to extract, clean and browse the [IRC Poker Database](https://pok
 
 Additional functionality added by me to extract further basic information about the data ([`extract_basic.py`](extract_basic.py)), reducing a round to the community cards and each players' pocket cards and whether they won/lost. The script [`encode_basic.py`](encode_basic.py) turns the data from `hands_basic.json` into encoded data (strings for cards converted to unique integers via [`encoding.py`](encoding.py)) for easy use in machine learning models.
 
+An example model repo can be found at [Poker Hand Model](https://github.com/linuskelsey/PokerHandModel).
+
 Provided a script [`separate_stages.py`](separate_stage.py) to allow data to be separated by which part of a hand you are modelling, be it the preflop, flop, river or turn.
 
 ## Data Preparation
