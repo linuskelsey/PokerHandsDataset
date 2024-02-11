@@ -7,9 +7,9 @@ def encode_card(card: str) -> int:
     rank = card[0].upper()
     suit = card[1].lower()
 
-    nout += suits.index(suit) * 13
+    nout += suits.index(suit)
     if rank in faceCards:
-        nout += 10 + faceCards.index(rank)
+        nout += (10 + faceCards.index(rank)) * 4
     else:
         nout += int(rank)
 
